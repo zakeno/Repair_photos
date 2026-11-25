@@ -1,7 +1,7 @@
 /* Caches the app files so it opens with no signal. Bump CACHE when you change any file. */
-var CACHE = 'repair-photos-v1';
+var CACHE = 'repair-photos-v2';
 var FILES = ['./', 'index.html', 'style.css', 'lib.js', 'app.js', 'manifest.webmanifest',
-  'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png'];
+  'icon-180.png', 'icon-192.png', 'icon-512.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(FILES); }).then(function () { return self.skipWaiting(); }));
 });
